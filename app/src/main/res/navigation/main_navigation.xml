@@ -33,5 +33,9 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="Namanya Kosong" />
+        <argument
+            android:name="usia"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>

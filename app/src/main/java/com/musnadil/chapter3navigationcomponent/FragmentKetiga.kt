@@ -23,7 +23,10 @@ class FragmentKetiga : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val aName = FragmentKetigaArgs.fromBundle(arguments as Bundle).name
+        val aUsia = FragmentKetigaArgs.fromBundle(arguments as Bundle).usia
         binding.tvNama.text = "Namanya : $aName"
+        binding.tvUsia.text = "Namanya : $aUsia"
+
     }
 
     override fun onDestroy() {

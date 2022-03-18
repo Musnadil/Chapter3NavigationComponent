@@ -31,7 +31,9 @@ class FragmentKedua : Fragment() {
             if(binding.etName.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(),"Kolom Nama masih kosong",Toast.LENGTH_LONG).show()
             }else{
-                val actionToFragmentKetiga = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga(binding.etName.text.toString())
+                val actionToFragmentKetiga = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga()
+                actionToFragmentKetiga.name = binding.etName.text.toString()
+                actionToFragmentKetiga.usia = binding.etUsia.text.toString().toInt()
                 view.findNavController().navigate(actionToFragmentKetiga)
             }
         }
